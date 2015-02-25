@@ -1,0 +1,4 @@
+pretzel: 
+    engine: liquid
+name: robertbird
+permalink: /:year/:month/:day/:title
