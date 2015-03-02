@@ -1,64 +1,62 @@
 ---
-layout : layout
-title : SiteName
+layout : blog3
+title : Rob Bird's Blog
+paginate: 2
+paginate_link: /page:page/index.html
 ---
-
-<ul class="posts">
+<div>
     {% for post in site.posts  limit:5 %}
-		<li>
-			<div class="idea">
-				{% if forloop.first and post.layout == "post" %}
-					<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-					
-					<div class="postdate">{{ post.date | date: "%e %B, %Y"  }}
-						<ul>
-						{% for tag in post.tags %}
-							<li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-						{% endfor %}
-						</ul>
-					</div>
-					
-					{{ post.content }}
-					<br />
-					<a href="{{ post.url}}#disqus_thread">Comments</a>
-				{% else %}
-					<h2><a class="postlink" href="{{ post.url }}">{{ post.title }}</a></h2>
-					<div class="postdate">{{ post.date | date: "%e %B, %Y"  }}
-						<ul>
-						{% for tag in post.tags %}
-							<li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-						{% endfor %}
-						</ul>
-					</div>
-					{{ post.content }}
-					
-					<a href="{{ post.url }}#disqus_thread">Comments</a>
-				{% endif %}
-			</div>
-		</li>
-    {% endfor %}
-</ul>
+        <div class="one column alpha">
+            <div class="date-post">
+                <span class="day">{{ post.date | date: "%d"  }}</span><span class="month">{{ post.date | date: "%b"  }}</span>
+            </div>
+        </div> <!-- End Date -->
+        <div class="ten columns omega">
+            <div class="post bottom">
 
-<h3>OLDER</h3>
-<ul class="postArchive">
+                <div class="image-post bottom-2">
+                    <a href="{{ post.url }}"><img src="/images/img/blog/post-image-2.jpg"></a>
+                </div>
+
+                <!-- Title Post -->
+                <h2 class="title bottom-2"><a href="{{ post.url }}">{{ post.title }}</a> <span class="line"></span></h2>
+
+                <div class="post-content">
+                    <p>{{ post.content | strip_html | truncatewords:75}}</p>
+                    <a href="{{ post.url }}" class="button medium color">Read More</a>
+                </div><!-- End post-content -->
+
+                <hr class="top bottom-2" />
+
+                <div class="post-meta bottom-2 transparent">
+                    <!-- Category -->
+                    <div class="meta">
+                        <span class="more-items icon gray"></span>
+                        {% for tag in post.tags %}
+                          <a href="/tag/{{ tag }}">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                    <!-- Author -->
+                    <div class="meta"><span class="user icon gray"></span> By : {{ post.author }} </div>
+                    <!-- Comments -->
+                    <div class="meta"><span class="conversation icon gray"></span> <a href="{{ post.url }}#disqus_thread">View Comments</a> </div>
+                </div><!-- End post-meta -->
+
+            </div><!-- End column post -->
+        </div>
+    {% endfor %}
+</div>
+
+<h5>Categories</h5>
+{% for category in site.categories %}
+  <li><a href="#{{ category | first }}">{{ category | first }}</a></li>
+{% endfor %}
+
+<h5>Posts:</h5>
 {% for post in site.posts offset:5 %}
 	<li>
 		<span class="olderpostdate"> {{ post.date | date: "%d %b"  }} </span> <a class="postlink" href="{{ post.url }}">{{ post.title }}</a>
 	</li>
 {% endfor %}
-</ul>
 
-<script type="text/javascript">
-//<![CDATA[
-(function() {
-    var links = document.getElementsByTagName('a');
-    var query = '?';
-    for(var i = 0; i < links.length; i++) {
-    if(links[i].href.indexOf('#disqus_thread') >= 0) {
-        query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-    }
-    }
-    document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/DISQUS_NAME/get_num_replies.js' + query + '"></' + 'script>');
-})();
-//]]>
-</script>
+{% include archives.html %}

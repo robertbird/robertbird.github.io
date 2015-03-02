@@ -1,4 +1,7 @@
 pretzel: 
-    engine: liquid
+engine: liquid
+paginate: 3
+paginate_path: /blog/page:num/
 name: robertbird
 permalink: /:year/:month/:day/:title
+
