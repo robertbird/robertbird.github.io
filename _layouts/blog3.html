@@ -105,55 +105,17 @@
    
    <!-- Start Posts -->
    <div class="eleven columns top bottom">
+       
+       
+    {% include paginatedposts.html %}
+       
      {{content}}
    
      <hr />
      
        
+{% include paginationlinks.html %}
 
-<ul class="pagination color">
-    {% if paginator.previous_page %}
-        {% if paginator.previous_page %}
-        <li><a href="#" class="prev">Previous</a></li>
-        {% else %}
-        <li><a href="/page{{ paginator.previous_page }}/" class="prev">Previous</a></li>
-        {% endif %}
-    {% else %}
-        <li><a class="prev disabled">Previous</a></li>
-    {% endif %}
-    
-    {% if paginator.page == 1 %}
-    <li><a class="current">1</a></li>
-    {% else %}
-    <li><a href="/">1</a></li>
-    {% endif %}
-    
-    {% for count in (2..paginator.total_pages) %}
-      {% if count == paginator.page %}
-      <li><a class="current">{{ count }}</a></li>
-      {% else %}
-      <li><a href="/page{{ count }}/">{{ count }}</a></li>
-      {% endif %}
-    {% endfor %}
-    
-    {% if paginator.next_page %}
-        <li><a href="/page{{ paginator.next_page }}/" class="button gray">Next</a></li>
-    {% else %}
-        <li><a class="next disabled">Next</a></li>
-    {% endif %}
-</ul>
-
-       
-       
-     <ul class="pagination color">
-          <li><a href="#" class="prev">previous</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#" class="current">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#" class="next">Next</a></li>
-        </ul><!-- End pagination color -->
-      
    </div><!-- End Posts -->  
    
    
@@ -203,106 +165,12 @@
        </p>
      </div>
      
-     <!-- Categories -->
-     <h2 class="title bottom-2">Categories <span class="line"></span></h2>
-     
-      <ul class="square-list categories bottom">
+    {% include categories.html %}
     
-{% for category in site.categories %}
-  <li><a href="#{{ category | first }}">{{ category[0] }}</a></li>
-{% endfor %}
-          
-          
-        {% for category in site.categories %}
-          <li><a name="{{ category | first }}">{{ category | first }}</a></li>
-        {% endfor %}
-          
-        {% for cat in site.data.categories %}
-            <li>{{ cat }}</li>
-        {% endfor %}
-          
-          <ul class="tag-box inline">
-{% assign tags_list = site.categories %}  
-  {% if tags_list.first[0] == null %}
-    {% for tag in tags_list %} 
-      <li><a href="#{{ tag }}">{{ tag | capitalize }} <span>{{ site.tags[tag].size }}</span></a></li>
-    {% endfor %}
-  {% else %}
-    {% for tag in tags_list %} 
-      <li><a href="#{{ tag[0] }}">{{ tag[0] | capitalize }} <span>{{ tag[1].size }}</span></a></li>
-    {% endfor %}
-  {% endif %}
-{% assign tags_list = nil %}
-</ul>
-
-          
-{% for post in site.categories.xamarin %}
-{{post.content}}
-{% endfor %}
-          
-          
-          
-        <li><a href="#">Design</a></li>
-      </ul><!-- End square-list -->
-    <!-- End -->
     
-    <!-- Most Posts -->
-        
-      <div id="horizontal-tabs" class="bottom">
-      
-        <ul class="tabs">
-          <li id="tab1">Popular</li>
-          <li id="tab2">Recent</li>
-        </ul>
-        <div class="contents">
-        
-        <div id="content1" class="tabscontent">
-          <ul class="most-posts">
-            <li>
-              <a href="single_post.html"><img src="images/img/blog/thumb-1.jpg" alt="" class="pic-2" /></a>
-              <p><a href="single_post.html">Donec seid odio dui. Nullalit libero, alea pharetra augue.</a></p>
-              <span class="color">28 June 2012</span>
-            </li>
-            <li>
-              <a href="single_post.html"><img src="images/img/blog/thumb-2.jpg" alt="" class="pic-2" /></a>
-              <p><a href="single_post.html">Donec seid odio dui. Nullalit libero, alea pharetra augue.</a></p>
-              <span class="color">28 June 2012</span>
-            </li>
-          </ul>
-        </div> 
-        
-        <div id="content2" class="tabscontent">
-         <ul class="most-posts">
-          <li>
-              <a href="single_post.html"><img src="images/img/blog/thumb-2.jpg" alt="" class="pic-2" /></a>
-              <p><a href="single_post.html">Donec seid odio dui. Nullalit libero, alea pharetra augue.</a></p>
-              <span class="color">28 June 2012</span>
-          </li>
-          <li>
-              <a href="single_post.html"><img src="images/img/blog/thumb-1.jpg" alt="" class="pic-2" /></a>
-              <p><a href="single_post.html">Donec seid odio dui. Nullalit libero, alea pharetra augue.</a></p>
-              <span class="color">28 June 2012</span>
-            </li>
-           </ul>
-          </div>  
-        
-        </div><!-- End contents -->
-        
-      </div><!-- End horizontal-tabs -->
-    
-    <!-- End -->
-    
-    <!-- Popular Tags -->
-    <h2 class="title bottom">Popular Tags <span class="line"></span></h2>
-    
-    <div class="popular-tags top bottom">
-    
-    <a href="#">Web Developer</a><a href="#">Branding</a><a href="#">Wordpress</a><a href="#">Web Design</a><a href="#">Logo</a>
-    <a href="#">PHP</a><a href="#">Graphic</a><a href="#">Competitions</a><a href="#">Awards & Recognition</a>
-    
-    </div>
-    <!-- End -->
-    
+         
+    {% include tags.html %}
+             
     <!-- Twitter Feed -->
     <h2 class="title bottom">Twitter Feed <span class="line"></span></h2>
     

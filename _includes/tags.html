@@ -1,0 +1,24 @@
+<!-- Popular Tags -->
+<h2 class="title bottom">Popular Tags <span class="line"></span></h2>
+
+<div class="popular-tags top bottom">
+
+<a href="#">Web Developer</a>
+<a href="#">Branding</a>
+<a href="#">Wordpress</a>
+<a href="#">Web Design</a><a href="#">Logo</a>
+
+    {% assign tags_list = site.tags %}  
+      {% if tags_list.first[0] == null %}
+        {% for tag in tags_list %} 
+          <a href="#{{ tag }}">{{ tag | capitalize }} <span>({{ site.tags[tag].size }})</span></a>
+        {% endfor %}
+      {% else %}
+        {% for tag in tags_list %} 
+          <a href="#{{ tag[0] }}">{{ tag[0] | capitalize }} <span>({{ tag[1].size }})</span></a>
+        {% endfor %}
+      {% endif %}
+    {% assign tags_list = nil %}
+    
+</div>
+<!-- End -->

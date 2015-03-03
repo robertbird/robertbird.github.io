@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: "My Second Post"
+title: "Post Number 8"
 author: "Robert Bird"
 comments: true
 ---

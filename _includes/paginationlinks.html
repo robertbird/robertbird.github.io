@@ -1,0 +1,33 @@
+
+total: {{ paginator.total_pages }}
+
+<ul class="pagination color">
+    {% if paginator.page == 1 %}
+        <li><a href="#" class="prev disabled">Previous</a></li>
+    {% elsif paginator.page == 2 %}
+        <li><a href="/" class="current">Previous</a></li>
+    {% else %}
+        <li><a href="/page/{{ paginator.previous_page }}/" class="current">Previous</a></li>
+    {% endif %}
+
+    {% if paginator.page == 1 %}
+    <li><a class="current">1</a></li>
+    {% else %}
+    <li><a href="/">1</a></li>
+    {% endif %}
+    
+    {% for count in (2..paginator.total_pages) %}
+      {% if count == paginator.page %}
+      <li><a class="current">{{ count }}</a></li>
+      {% else %}
+      <li><a href="/page/{{ count }}/">{{ count }}</a></li>
+      {% endif %}
+    {% endfor %}
+    
+    {% if paginator.page == paginator.total_pages %}
+        <li><a class="next disabled">Next</a></li>
+    {% else %}
+        <li><a href="/page/{{ paginator.next_page }}/" class="current">Next</a></li>
+    {% endif %}
+</ul>
+

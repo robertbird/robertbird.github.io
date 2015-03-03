@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: "My First Post"
+title: "Post Number 2"
 author: "Author"
 comments: true
 tags:
