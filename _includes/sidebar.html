@@ -1,0 +1,73 @@
+
+   <!-- Start Sidebar Widgets -->
+   
+     <!-- Search Widget -->
+     <div class="search top bottom">
+     <form action="#">
+       <input type="text" class="search" value="Search in blog" onBlur="if(this.value == '') { this.value = 'Search in blog'; }" 
+       onfocus="if(this.value == 'Search in blog') { this.value = ''; }" />
+       <input type="submit" value="" class="submit-search" />
+     </form>
+     </div>
+     <!-- End -->
+     
+     <!-- Followers Widget -->
+     <div class="box top bottom">
+     
+        <ul class="followers">
+        <li>
+        <a href="http://uk.linkedin.com/in/robfbird" data="LinkedIn" class="black colorTipContainer"><span class="social-icon linkedin color"></span></a>
+            <h4>LinkedIn</h4>
+        </li>
+        <li>
+        <a href="http://twitter.com/robfbird" data="Twitter" class="black colorTipContainer"><span class="social-icon twitter color"></span></a>
+            <h4>Twitter</h4>
+        </li>
+        <li>
+        <a href="https://plus.google.com/+RobertBirdOnline" data="Google+" class="black colorTipContainer"><span class="social-icon google_plus  color"></span></a>
+            <h4>Google+</h4>
+        </li>
+        <li>
+        <a href="/rss.xml" data="Rss" class="black colorTipContainer"><span class="social-icon rss color"></span></a> 
+            <h4>RSS</h4>
+        </li>
+        
+     </div><!-- End -->
+     
+     <!-- Text Widget -->
+     <h2 class="title bottom-2">Text Widget <span class="line"></span></h2>
+     
+     <div class="about-project bottom">
+       <p>
+         Donec seid odio dui. Nullalit libero, alea pharetra augue. Nullam id dolor ideacto vehicula SockMonkee lorem dolor.
+         Donec seid odio dui. Nullalit libero, alea pharetra augue. Nullam id dolor ideacto vehicula SockMonkee lorem dolor.
+       </p>
+     </div>
+     
+    {% include categories.html %}
+    
+    
+         
+    {% include tags.html %}
+             
+    <!-- Twitter Feed -->
+    <h2 class="title bottom">Twitter Feed <span class="line"></span></h2>
+    
+    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/robfbird" data-widget-id="572139781560496128" width="100%" height="350px">Tweets by @robfbird</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+         
+    <div class='tweet query'></div><!-- Tweets Code -->
+    
+         
+         
+    <!-- End -->
+    
+     <!-- From Flickr -->
+    <h2 class="title bottom">From Flickr <span class="line"></span></h2>
+    
+    <ul id="sidebar" class="thumbs"></ul><!-- Flickr Code -->
+    
+    <!-- End -->
+    
+   
+   
