@@ -4,4 +4,10 @@ paginate: 3
 paginate_path: /page/:num/
 name: robertbird
 permalink: /:categories/:title
-
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      sitetitle: "test"

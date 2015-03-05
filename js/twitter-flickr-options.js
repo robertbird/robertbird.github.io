@@ -21,18 +21,18 @@
 // flickr options
 $(document).ready(function(){
 
-	$('#sidebar').jflickrfeed({
-		limit: 6,
-		qstrings: {
-			id: '95464748@N07' // Flickr Id form feed Rss in your photostream in flickr profile
-		},
-		itemTemplate: '<li><a href="{{link}}" title="{{title}}" target="_blank"><img src="{{image_m}}" alt="{{title}}" /></a></li>'
-	});
+//	$('#sidebar').jflickrfeed({
+//		limit: 6,
+//		qstrings: {
+//			id: '34026756@N00' // Flickr Id form feed Rss in your photostream in flickr profile
+//		},
+//		itemTemplate: '<li><a href="{{link}}" title="{{title}}" target="_blank"><img src="{{image_m}}" alt="{{title}}" /></a></li>'
+//	});
 	
 	$('#footer').jflickrfeed({
-		limit: 4,
+		limit: 8,
 		qstrings: {
-			id: '95464748@N07' // Flickr Id form feed Rss in your photostream in flickr profile
+			id: '34026756@N00' // Flickr Id form feed Rss in your photostream in flickr profile
 		},
 		itemTemplate: '<li><a href="{{link}}" title="{{title}}" target="_blank"><img src="{{image_m}}" alt="{{title}}" /></a></li>'
 	});

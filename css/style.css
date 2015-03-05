@@ -72,7 +72,7 @@
 .title {
 	padding:10px 0 10px 0;
 	border-bottom:1px solid #ececec;
-	margin:15px 0 15px 0;
+	margin:0px 0 15px 0;
 }
 
 .whyus img {
@@ -197,7 +197,7 @@ h1.page-title {
 }
 
 h2.title {
-	padding:5px 0 10px 0;
+	padding:0px 0 10px 0;
 	border-bottom:1px solid #ececec;
 	margin-bottom:25px;
 }
@@ -1120,7 +1120,7 @@ input.subscribe-button {
 }
 
 #footer.thumbs li {
-	width:30.9%;
+	width:22%;
 }
 
 #horizontal-tabs ul.tabs li {
