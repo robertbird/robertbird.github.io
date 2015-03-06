@@ -6,11 +6,11 @@
     {% assign tags_list = site.tags %}  
       {% if tags_list.first[0] == null %}
         {% for tag in tags_list %} 
-          <a href="#{{ tag }}">{{ tag | capitalize }} <span>({{ site.tags[tag].size }})</span></a>
+          <a href="/tag/#{{ tag }}" style="font-size: {{ tag | last | size | times: 100 | divided_by: site.categories.size | plus: 70 }}%">{{ tag | capitalize }} <span>({{ site.tags[tag].size }})</span></a>
         {% endfor %}
       {% else %}
         {% for tag in tags_list %} 
-          <a href="#{{ tag[0] }}">{{ tag[0] | capitalize }} <span>({{ tag[1].size }})</span></a>
+          <a href="/tag/#{{ tag[0] }}" style="font-size: {{ tag | last | size | times: 100 | divided_by: site.categories.size | plus: 70 }}%">{{ tag[0] | capitalize }} <span>({{ tag[1].size }})</span></a>
         {% endfor %}
       {% endif %}
     {% assign tags_list = nil %}

@@ -6,7 +6,6 @@ comments: true
 categories:
 - blogging
 tags:
-- jekyll
 - code
 ---
 

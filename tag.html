@@ -1,0 +1,33 @@
+---
+layout: twocolumn
+permalink: tag/
+---
+
+   
+<h1 class="title top-2 bottom-2">Articles by Tag <span class="line"></span></h1>
+<div>
+  
+{% for tag in site.tags %}
+  {% assign t = tag | first %}
+  {% assign posts = tag | last %}
+<a name="{{ t | downcase }}"/>
+<h4>{{ t | downcase }}</h4>
+<ul class="arrow-list">
+{% for post in posts %}
+  {% if post.tags contains t %}
+  <li>
+    <time class="">{{ post.date | date: "%B %-d, %Y"  }}</time>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>
+{% endfor %}
+  
+</div>
+
+
+
+
+
+

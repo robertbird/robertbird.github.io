@@ -5,7 +5,6 @@ author: "Author"
 comments: true
 tags:
 - jekyll
-- code
 categories: 
 - xamarin
 ---

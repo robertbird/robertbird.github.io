@@ -1,10 +1,9 @@
 ---
-layout: page
-title: About
+layout: onecolumn
+title: Contact Me
 comments: false
-permalink: about/
+permalink: contactmd/
 ---
 
-##To Do
 
 Edit this Markdown to add an about page

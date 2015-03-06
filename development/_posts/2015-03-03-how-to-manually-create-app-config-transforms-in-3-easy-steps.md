@@ -8,13 +8,21 @@ excerpt_separator: <!--more-->
 
 For this example we will assume that we are adding a transform for a configuration called PROD. 
 
-**Step 1.**
+
+
+
+### Step 1.
 
 Create a new empty config file using the same naming conventions as web.config files follow. So for our example we would create a new file alongside the _app.config_ called _app.PROD.config_.
 
-**Step 2**
 
-Edit the project file to include the new file. To do this you first need to right click on the project and select &quot;_Unload Project_&quot; near the bottom of the menu. Then right click on the project again and select edit from the menu.
+
+
+### Step 2
+
+Edit the project file to include the new file. To do this you first need to right click on the project and select &quot;_Unload Project_&quot; near the bottom of the menu. Then right click on the project again and select edit from the menu.  
+
+
 
 You will then see the project files XML contents. Hit CTRL+F and search in the file for &quot;app.config&quot; you should find the following:
 <!--more-->
@@ -33,7 +41,7 @@ You will then see the project files XML contents. Hit CTRL+F and search in the f
 
 Below this fragment of XML add 
 
-{% highlight xml linenos %}
+{% highlight xml lineanchors %}
 <None Include="App.PROD.config">
   <DependentUpon>App.config</DependentUpon>
   <SubType>Designer</SubType>
@@ -44,7 +52,7 @@ This will add the new file to the project, but the dependentUpon element will me
 
 You can now right click on the project and select "_Reload Project_"
 
-**Step 3**
+### Step 3
 
 While you have the project file open, add the following XML to the end of the file just before the closing </Project> tag.
 
@@ -62,8 +70,6 @@ While you have the project file open, add the following XML to the end of the fi
     </ItemGroup>
 </Target>
 {% endhighlight %}
-
-
 
 
 Hang on, what did that do? Ok, so the XML above checks for a file called app.[BuildConfiguration].config and If it exists it will apply the same XML transform used in web projects. The result is that after running a build the output folder will contain a file called app.config that has been transformed using the appropriate transform file. 

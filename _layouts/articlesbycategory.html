@@ -1,0 +1,18 @@
+---
+layout: twocolumn
+---
+
+<h1>Articles in category: <b>{{ page.category }}</b></h1>
+
+<div class="bottom">
+  {% if site.categories[page.category] %}
+  <ul class="arrow-list">
+    {% for post in site.categories[page.category] %}
+    <li><time>{{ post.date | date:"%d %b" }}</time> <a href="{{ post.url }}/">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul> 
+  {% else %}
+    <p>There are no posts for this category.</p>
+  {% endif %}
+</div>
+

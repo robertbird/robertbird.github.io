@@ -4,7 +4,6 @@ title: "Post Number 4"
 author: "Author"
 comments: true
 tags:
-- jekyll
 - code
 ---
 
