@@ -33,7 +33,7 @@ You will then see the project files XML contents. Hit CTRL+F and search in the f
 
 Below this fragment of XML add 
 
-{% highlight xml lineanchors %}
+{% highlight xml linenos %}
 <None Include="App.PROD.config">
   <DependentUpon>App.config</DependentUpon>
   <SubType>Designer</SubType>
