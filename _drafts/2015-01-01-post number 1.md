@@ -1,9 +1,12 @@
 --- 
 layout: post
-title: "Post Number 6"
+title: "Post Number 1"
 author: "Author"
 comments: true
-categories: [Blogging]
+tags:
+- jekyll
+categories: 
+- Mobile
 ---
 
 ## Hello world...

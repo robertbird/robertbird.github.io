@@ -8,14 +8,12 @@ excerpt_separator: <!--more-->
 
 For this example we will assume that we are adding a transform for a configuration called PROD. 
 
-
+![My helpful screenshot]({{ site.url }}/assets/config-transforms.png)
 
 
 ### Step 1.
 
 Create a new empty config file using the same naming conventions as web.config files follow. So for our example we would create a new file alongside the _app.config_ called _app.PROD.config_.
-
-
 
 
 ### Step 2

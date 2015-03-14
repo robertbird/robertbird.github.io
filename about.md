@@ -5,6 +5,4 @@ comments: false
 permalink: about/
 ---
 
-##To Do
-
-Edit this Markdown to add an about page
+I love all things development. 
