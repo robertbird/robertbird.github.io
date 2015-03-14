@@ -15,7 +15,7 @@ This may not cause any issues, but occasionally this will catch you out.
 
 One common problem is when you come to diagnose a problem and look in the IIS logs only to see that all of the traffic is coming from the same IP address. Of course it turns out that this is the IP address of the load balancer. So how do we solve this issue?
 
-Introducing the X-Forward-For HTTP header.&nbsp;
+Introducing the [X-Forward-For header](http://en.wikipedia.org/wiki/X-Forwarded-For): It is simply a HTTP header that is used to identify the originating IP address of the client.
 
 [BACKGROUND AND LINKS]
 

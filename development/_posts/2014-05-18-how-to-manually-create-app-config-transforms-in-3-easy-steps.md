@@ -8,7 +8,7 @@ excerpt_separator: <!--more-->
 
 For this example we will assume that we are adding a transform for a configuration called PROD. 
 
-![My helpful screenshot]({{ site.url }}/assets/config-transforms.png)
+![My helpful screenshot]({{ site.url }}/assets/config-transforms.jpg)
 
 
 ### Step 1.
