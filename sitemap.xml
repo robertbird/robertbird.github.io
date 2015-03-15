@@ -20,11 +20,15 @@
   
   {% for page in site.pages %}
 	{% if page.url %}
+    {% if page.url contains '404' %}
+    {% else %}
+    
 	<url>
 		<loc>http://www.robertbird.co.uk{{ page.url | remove: 'index.html' }}</loc>
 		<changefreq>daily</changefreq>
 		<priority>1.00</priority>
 	</url>
+	{% endif %}
 	{% endif %}
   {% endfor %}
   

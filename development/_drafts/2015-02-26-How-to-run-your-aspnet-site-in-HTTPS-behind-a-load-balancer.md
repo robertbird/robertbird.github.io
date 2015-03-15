@@ -4,7 +4,7 @@ title: How to run your asp.net site in HTTPS behind a load balancer
 author: "Robert Bird"
 comments: true
 tags:
-- https, infrastructure
+- https, infrastructure, devops
 ---
 
 If you have installed your SSL certificates on the load balancer to offload the decryption and boost the performance of your web servers then it's likely that the load balancer is sending traffic onwards to your servers under plain old HTTP. (instead of HTTPS)
@@ -17,9 +17,7 @@ One common problem is when you come to diagnose a problem and look in the IIS lo
 
 Introducing the [X-Forward-For header](http://en.wikipedia.org/wiki/X-Forwarded-For): It is simply a HTTP header that is used to identify the originating IP address of the client.
 
-[BACKGROUND AND LINKS]
-
-Most load balancers support sending the original users IP address through as an additional HTTP header, but you may need your hosting provider to configure this.&nbsp;
+Most load balancers support sending the original users IP address through as an additional HTTP header, but you may need your hosting provider to configure this. (we did)
 
 Once this is setup you will need to install an additional IIS module to have it capture these headers in it's logs.&nbsp;
 

@@ -4,6 +4,9 @@ title: "How to manually create App.Config transforms in 3 easy steps"
 author: "Robert Bird"
 comments: true
 excerpt_separator: <!--more-->
+tags:
+- configuration
+- devops
 ---
 
 For this example we will assume that we are adding a transform for a configuration called PROD. 
