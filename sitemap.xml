@@ -11,7 +11,7 @@
   
   {% for post in site.posts %}
   <url>
-    <loc>http://www.robertbird..co.uk{{ post.url | remove: 'index.html' }}</loc>
+    <loc>http://www.robertbird.co.uk{{ post.url | remove: 'index.html' }}</loc>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
@@ -21,7 +21,7 @@
   {% for page in site.pages %}
 	{% if page.url %}
 	<url>
-		<loc>http://www.robertbird..co.uk{{ page.url | remove: 'index.html' }}</loc>
+		<loc>http://www.robertbird.co.uk{{ page.url | remove: 'index.html' }}</loc>
 		<changefreq>daily</changefreq>
 		<priority>1.00</priority>
 	</url>
