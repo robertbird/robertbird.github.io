@@ -5,4 +5,4 @@ comments: false
 permalink: about/
 ---
 
-I love all things development. 
+Content to come soon, I promise!
