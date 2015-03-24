@@ -11,7 +11,7 @@ tags:
 
 For this example we will assume that we are adding a transform for a configuration called PROD. 
 
-![My helpful screenshot]({{ site.url }}/assets/config-transforms.jpg)
+![Web.Config transforms applied to our App.Config]({{ site.url }}/assets/config-transforms.jpg)
 
 
 ### Step 1.

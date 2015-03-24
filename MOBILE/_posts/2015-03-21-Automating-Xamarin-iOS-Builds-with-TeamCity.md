@@ -121,7 +121,7 @@ Now that we have a build script, we just need to configure TeamCity to run our b
 
 To do this add a _Command Line_ build step and execute the build script using the _sh BuildScript.sh_ command above.
 
-![My helpful screenshot]({{ site.url }}/assets/XamarinTCBuildStep.png)
+![Create a TeamCity build step to execute our script]({{ site.url }}/assets/xamarin-build-step.png)
 
 The final thing we need to do is configure the location of the resulting .ipa file in the build artifacts in TeamCity. This will mean that TC stores the .ipa file on the server, allowing you to use it in subsequent build steps if required or download it later if needed. 
 
