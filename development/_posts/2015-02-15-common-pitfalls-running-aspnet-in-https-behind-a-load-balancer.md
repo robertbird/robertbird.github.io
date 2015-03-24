@@ -4,7 +4,6 @@ title: Common pitfalls running your asp.net site in HTTPS behind a load balancer
 author: "Robert Bird"
 comments: true
 tags:
-- https
 - infrastructure
 - devops
 ---
@@ -12,6 +11,9 @@ tags:
 If you've installed your SSL certificates on the load balancer to offload the decryption processing and boost the performance of your web servers then it's possible that this will change subtle details in the traffic being sent onwards to your web servers.
 
 This may not cause any issues, but occasionally it will catch you out. Here are some of the common pitfalls I have experienced (so far)
+
+
+<!--![Load balancer]({{ site.url }}/assets/loadbalancer.jpg)-->
 
 ##Are You Missing IIS Client IP Addresses?##
 

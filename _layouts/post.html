@@ -12,24 +12,25 @@ layout: twocolumn
     <div class="meta"><span class="history  icon gray"></span> On {{ page.date | date: "%e %B, %Y"  }} </div><!-- Date -->
     <div class="meta"><span class="book_open icon gray"></span>
       {% for cat in page.categories %}
-	     <a href="/{{ cat }}">{{ cat }}</a>
+	     <a href="/{{ cat }}">{{ cat | capitalize }}</a>
       {% endfor %}
     </div><!-- Category -->
-    <!-- tags -->
-    {% assign hastags = post.tags | size %}
-    {% if hastags != 0 %}
-    <div class="meta">
-        <span class="more-items icon gray"></span>
-        {% for tag in post.tags %}
-          <a href="/tag/#{{ tag }}">{{ tag }}</a>
-        {% endfor %}
-    </div>
-    {% endif %}
+       
     <!-- Author -->
     <div class="meta"><span class="user icon gray"></span> By : {{ page.author }} </div>
     <!-- Comments -->
     <div class="meta"><span class="conversation icon gray"></span> <a href="#disqus_thread">View Comments</a> </div>
      
+    <!-- tags -->
+    {% assign hastags = page.tags | size %}
+    {% if hastags != 0 %}
+    <div class="meta">
+        <span class="more-items icon gray"></span>
+        {% for tag in page.tags %}
+          <a href="/tag/#{{ tag }}">{{ tag }}</a>,
+        {% endfor %}
+    </div>
+    {% endif %}
   </div><!-- End post-meta -->
 
   <div class="post-content bottom">

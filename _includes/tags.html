@@ -10,7 +10,7 @@
         {% endfor %}
       {% else %}
         {% for tag in tags_list %} 
-          <a href="/tag/#{{ tag[0] }}" style="font-size: {{ tag | last | size | times: 100 | divided_by: site.categories.size | plus: 10 }}%">{{ tag[0] | capitalize }} <span>({{ tag[1].size }})</span></a>
+          <a href="/tag/#{{ tag[0] }}" style="font-size: {{ tag | last | size | times: 100 | divided_by: site.categories.size | plus: 30 }}%">{{ tag[0] | capitalize }} <span>({{ tag[1].size }})</span></a>
         {% endfor %}
       {% endif %}
     {% assign tags_list = nil %}

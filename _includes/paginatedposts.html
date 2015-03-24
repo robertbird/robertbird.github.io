@@ -46,23 +46,23 @@
                 <div class="meta">
                     <span class="book_open icon gray"></span>
                     {% for cat in post.categories %}
-                      <a href="/{{ cat }}">{{ cat }}</a>
+                      <a href="/{{ cat }}">{{ cat | capitalize }}</a>
                     {% endfor %}
                 </div>
+                <!-- Author -->
+                <div class="meta"><span class="user icon gray"></span> By : {{ post.author }} </div>
+                <!-- Comments -->
+                <div class="meta"><span class="conversation icon gray"></span> <a href="{{ post.url }}#disqus_thread">View Comments</a> </div>
                 <!-- tags -->
                 {% assign hastags = post.tags | size %}
                 {% if hastags != 0 %}
                 <div class="meta">
                     <span class="more-items icon gray"></span>
                     {% for tag in post.tags %}
-                      <a href="/tag/{{ tag }}">{{ tag }}</a>
+                      <a href="/tag/{{ tag }}">{{ tag }}</a>,
                     {% endfor %}
                 </div>
                 {% endif %}
-                <!-- Author -->
-                <div class="meta"><span class="user icon gray"></span> By : {{ post.author }} </div>
-                <!-- Comments -->
-                <div class="meta"><span class="conversation icon gray"></span> <a href="{{ post.url }}#disqus_thread">View Comments</a> </div>
             </div><!-- End post-meta -->
 
         </div><!-- End column post -->

@@ -10,38 +10,19 @@ body {
   color: #8d8d8d;
 }
 
+a {
+    color: #00AEC8;
+}
+
+.post-content a:hover {
+    text-decoration: underline;
+}
+
 .mugshot {
   border-radius: 50%;
   max-width: 180px;
   vertical-align: -9px;
 }
-
-/*
-
-ol { list-style: decimal; }
-
-ol, ul {
-    padding-left: 30px;
-}
-
-ul li, ol li {
-	padding:5px 5px 5px 15px;
-	line-height:20px;
-}
-
-
-ul li:hover, ol li:hover{
-	padding-left:18px;
-	background-position:1% 50%;
-}
-
-
-ul li { background:url(../images/icons/list-icons/square.png) no-repeat; background-position:0 50%; }
-.check-list li { background:url(../images/icons/list-icons/check.png) no-repeat; background-position:0 50%; }
-.plus-list li { background:url(../images/icons/list-icons/plus.png) no-repeat; background-position:0 50%; }
-.arrow-list li { background:url(../images/icons/list-icons/arrow.png) no-repeat; background-position:0 50%; }
-.cross-list li { background:url(../images/icons/list-icons/cross.png) no-repeat; background-position:0 50%; }
-.star-list li { background:url(../images/icons/list-icons/star.png) no-repeat; background-position:0 50%; }*/
 
 .post-content ul, .post-content ol { padding: 5px 0; }
 
