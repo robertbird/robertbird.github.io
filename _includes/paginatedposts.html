@@ -59,7 +59,7 @@
                 <div class="meta">
                     <span class="more-items icon gray"></span>
                     {% for tag in post.tags %}
-                      <a href="/tag/{{ tag }}">{{ tag }}</a>,
+                      <a href="/tag/#{{ tag }}">{{ tag }}</a>,
                     {% endfor %}
                 </div>
                 {% endif %}
