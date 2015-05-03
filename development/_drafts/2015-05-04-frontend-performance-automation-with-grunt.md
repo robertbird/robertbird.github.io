@@ -59,6 +59,12 @@ This is an extension on top of YSlow to try to help us developers optimise 3rd p
 
 [![Webpage Test Results]({{ site.url }}/assets/perf/PageSpeedInsights-tn.png)]({{ site.url }}/assets/perf/PageSpeedInsights-mobile.png)
 
+<iframe src="http://www.webpagetest.org/video/view.php?id=150502_BV_VSC.1.0&embed=1&width=520&height=432" width="520" height="432"></iframe>
+
+http://www.webpagetest.org/result/150502_BV_VSC/
+(66 Requests)
+
+
 So the results are in and they are not good. This is typical for many websites - so far I have taken the path of least resistance and just used an off the shelf template which isn't following any of the rules outlined in Steve's book *High Performance Web Sites*. 
 
 Luckily for me, the site is hosted on [GitHub Page](https://pages.github.com/) so most of the server side improvements like keep alives, use of a CSN and GZip compression are already being done for me. Also the fact that my site is just returning pre generated static HTML files coupled with the fact that GitHub use a reasonably fast CDN for the content means the time to first byte is also very good.
@@ -94,26 +100,91 @@ So if we review the items left then the following actions seem like an obvious s
 
 While I was there I also removed the use of redundant javascript files which came with the template but I am not actually using. After these improvement the result is:
 
+![Webpage Test Results]({{ site.url }}/assets/perf/PageSpeedInsights-stage1-tn.png)
 
 (I am going to use the Google Pagespeed rankings to show incremental performance improvements as the number rating gives a us a good way to quantify the changes.)
 
-## Round 2 
+#### Round 2 
 
 The next important step (which I always think makes the biggest difference) is just to minimse the number of HTTP requests. 
 
-So we currently have XXXXXXXXXXX requests for css files and YYYYYYYYY requests for javascript files. The plan is to combine these files together so that we make only one request for CSS and another single request for javascript. When combining the files we can actually go one step further and minimise the files while we are there. 
+So we currently have 12 requests for css files and 9 requests for javascript files. The plan is to combine these files together so that we make only one request for CSS and another single request for javascript. When combining the files we can actually go one step further and minimise the files while we are there. 
+
+http://www.webpagetest.org/result/150503_BA_MG0/1/details/
+
+We've brought the number of requests down slightly, but there are still far too many, the main thing to note with this change is that the 
+
+## Enter front end build automation tooling (Grunt vs Gulp)
+
+If you've not heard of Grunt or Gulp before then they are definitely worth investigating. They allow developers to automate many of the tasks associated with front end programming from running unit tests to running analysis tools such as JSLint. You can also find plenty of tasks to combine and minify assets, so they are perfect for our needs. They both run at the commandline and make use of Node JS. The great thing about them is that you can set them up to watch the file system and run your build pipeline as soon as anything changes. I first came across these tools when I saw Paul Irish presenting a frontend development workflow which is very inspiring and definitely worth watching. 
+
+It seems that Gulp is the new Grunt and as I am into blindly following new trends at the moment (static site generators are the new CMS?) then I thought I would give it a go. However, some of the plugins I was hoping to use, namely imagemin just didn't work out for me because of a path length problem, which I think is just due to an underlying problem with Node Package Manager (NPM) running on windows. 
+
+If you are starting a new project then a great resource to check out is Yeoman. They have a great discussion about plugins for performance optimisations here. They list plugins for both Grunt and Gulp, if you are wondering which one to go for then there is quite a good overview here.
+
+So first things first we need to first install Grunt.
+
+#### Installing Grunt
+
+The first thing we need to do is install Node, you can do this by going to [the node website](https://nodejs.org/download/) and downloading the latest version. Personally find it easier to use [Chocolatey](https://chocolatey.org/) and keep a log of the tools I use so that I can easily install them again. So to install via Chocolatey then you can use:
+
+choco install nodejs.install
+
+Once you have Node JS installed you can browse to the website root and run the following command to install Grunt. 
+
+npm install -g grunt-cli
+
+This will install Grunt globally, we now need to setup grunt within our project folder too. 
+
+First we need to create a package.json file. We can then install node modules (including Grunt) into our project by running:
+
+
+However, if we know the modules we want we can add them to the package file and install them all at once. So we will do this by adding the following package.json file:
+
+{
+  "name": "robertbird.co.uk",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": 
+  {
+    "grunt": "~0.4.1",
+    "load-grunt-tasks": "~0.1.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-usemin": "~0.1.11",
+    "grunt-concurrent": "~0.3.0",
+    "grunt-contrib-imagemin": "~0.2.0",
+    "grunt-svgmin": "~0.2.0",
+    "grunt-contrib-htmlmin": "~0.1.3",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-rev": "~0.1.0"
+  }
+}
+
+Now we just run 
+
+npm install
+
+And node will initialise our project folder based on this config file. 
+
+The final thing we need to do is create a Grunt build file.
 
 
 
-
-Some more advanced performance improvements include
-
-- Image compression
-- Spritesheets
-- Using a different domain for images and cookies ??
-- Using a CDN - setting up Azure as a cdn on a different sub.domain for images and static resources
+## Automating Minification and Combining of Files.
 
 
+## Image Crunching
+
+
+## More advanced optimisations
+
+### Spritesheets
+
+
+### Using a subdomain and CDN to host static files (with no cookies). 
 
 http://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt/
 

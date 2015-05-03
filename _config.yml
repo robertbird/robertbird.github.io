@@ -4,6 +4,7 @@ paginate: 3
 paginate_path: /page/:num/
 name: robertbird
 permalink: /:categories/:title
+exclude: ['node_modules', 'grunt-tasks']
 defaults:
   -
     scope:
