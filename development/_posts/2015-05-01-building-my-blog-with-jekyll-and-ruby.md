@@ -44,7 +44,7 @@ However, I really wanted to use my own theme and quickly came across a few issue
 
 ## Organising blog posts by category and working with draft posts
 
-To start creating blog posts you just need to a create special markdown files, if you are not familiar with markdown then here is a great cheatsheet [https://help.github.com/articles/markdown-basics/](https://help.github.com/articles/markdown-basics/)
+To start creating blog posts you just need to a create special markdown files, if you are not familiar with markdown then here is a great cheatsheet [https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 Most how-to guides talk you through the process of creating a folder called '_posts' to put you markdown files into, but what I didn't realise is that there can be more than one _posts folder. In fact, if you put a _posts folder within another folder it will use that folder name as the blog category. This is great because it means I can use the folder structure to organise my posts into categories. 
 
