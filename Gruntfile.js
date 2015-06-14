@@ -32,7 +32,7 @@ module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
 
-  // Default Task is basically a rebuild
-  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'imagemin', 'autoprefixer', 'cssmin']);
+  // Default Task is basically a rebuild -- 'autoprefixer', 
+  grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'cssmin']);
 
 };

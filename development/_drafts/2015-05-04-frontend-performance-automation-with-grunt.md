@@ -195,3 +195,53 @@ http://markdalgleish.github.io/presentation-build-wars-gulp-vs-grunt/
 ## Final score.
 
 
+
+## Useful Links
+
+Here are some links I found useful:
+
+* [Speeding up your site with a build process](http://www.designsuperbuild.com/blog/getting_started_with_grunt/)
+* [How to Install Gulp.js on Windows](http://omcfarlane.co.uk/install-gulp-js-windows/)
+* [Sample Gulp file](https://gist.github.com/franksmule/9817730)
+* [Getting started with gulp](https://markgoodyear.com/2014/01/getting-started-with-gulp/)
+* [YEOMAN - Performance Optimisations recommendations](http://yeoman.io/blog/performance-optimization.html)
+* [Jekyll Grunt Yeoman Generator](https://github.com/robwierzbowski/generator-jekyllrb/)
+* [Install BrowserSync manually to get past errors](https://github.com/robwierzbowski/generator-jekyllrb/issues/145)
+* [Getting Started with Grunt - Speeding up your site with a build process](http://www.designsuperbuild.com/blog/getting_started_with_grunt/)
+* [“Grunt” your way to frontend performance optimization](http://www.bbinto.me/easy/grunt-your-way-through-frontend-performance-optimization/)
+* [Grunt Boilerplate](https://github.com/chriscoyier/My-Grunt-Boilerplate)
+* [Supercharging your Gruntfile](http://www.html5rocks.com/en/tutorials/tooling/supercharging-your-gruntfile/)
+* [ShowSlow](http://www.showslow.com/details/44581568/http://www.robertbird.co.uk/#webpagetest)
+* [Grunt - concat](https://github.com/gruntjs/grunt-contrib-concat)
+* [Jekyll configuration options - for excluding content (node modules)](http://jekyllrb.com/docs/configuration/)
+* [Gulp documentation](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
+* [Gulp - node streams](https://github.com/substack/stream-handbook)
+* [Optimizing Images with Grunt & Gulp](https://mijingo.com/blog/optimizing-images-with-grunt-gulp)
+* [Grunt Build Control - task for checking in as part of a build](https://github.com/robwierzbowski/grunt-build-control)
+
+
+Perf Results Pages:
+* [Initial](http://www.webpagetest.org/result/150502_BV_VSC/)
+* [Round 1](http://www.webpagetest.org/result/150503_BA_MG0/)
+* [Round 2](http://www.webpagetest.org/result/150503_WV_V19/)
+* [Round 3](http://www.webpagetest.org/result/150503_42_VZ7/)
+* []()
+
+npm install -g generator-jekyllrb
+yo jekyllrb
+npm install --msvs_version=2012
+npm install bower -g
+bower install
+npm install grunt-browser-sync --save-dev --msvs_version=2012
+node --version
+
+
+
+
+Use flag  --msvs_version=2012 when installing if you see visual studio errors
+
+{ImageMin problems on Windows](https://github.com/gruntjs/grunt-contrib-imagemin/issues/109)
+
+http://davidcalhoun.me/2013/10/30/migration-to-jekyll-my-journey-to-understanding-yeoman/
+
+[Grunt Auto Prefixer](http://grunt-tasks.com/autoprefixer/)
