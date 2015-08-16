@@ -1,0 +1,15 @@
+--- 
+layout: post
+title: Front End Performance Automation With Grunt
+author: "Robert Bird"
+comments: true
+excerpt_separator: <!--more-->
+tags:
+- development
+- blogging
+---
+
+In my last post I described how I [got up and running with Grunt for an easy way to ensure that my build process keeps me optimised for front end performance](/development/keeping-node-and-grunt-up-to-date).
+
+I admit that was an epic post, one that was more of a log I 
+
