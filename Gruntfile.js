@@ -1,3 +1,5 @@
+// http://www.thomasboyt.com/2013/09/01/maintainable-grunt.html
+
 
 module.exports = function(grunt) {
 
@@ -34,5 +36,6 @@ module.exports = function(grunt) {
 
   // Default Task is basically a rebuild -- 'autoprefixer', 
   grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'cssmin']);
+  //grunt.registerTask('rob', ['uglify']);
 
 };

@@ -4,7 +4,8 @@ module.exports = {
       expand: true,
       cwd: 'assets/',
       src: ['**/*.{png,jpg,gif}'],
-      dest: 'assets/'
+      dest: 'assets/',
+        optimizationLevel : 6
     }]
   },
   template: {

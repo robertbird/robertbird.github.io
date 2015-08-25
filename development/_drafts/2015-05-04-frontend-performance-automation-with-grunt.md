@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: Front End Performance Automation With Grunt
+title: Front End Performance Automation With Grunt - Part 1
 author: "Robert Bird"
 comments: true
 excerpt_separator: <!--more-->
@@ -9,7 +9,9 @@ tags:
 - blogging
 ---
 
-[In my last post](/development/building-my-blog-with-jekyll-and-ruby/) I described how I set up this blog using a static site generator called [Jekyll](http://jekyllrb.com/). 
+[In my last post](/development/building-my-blog-with-jekyll-and-ruby/) I described how I set up this blog using a static site generator called [Jekyll](http://jekyllrb.com/). I've alsways taken an interest in front end performance, so once I had this blog up and running I was keen to see how a stat
+
+This is the first part in a series of posts about front end performance optimisation using Grunt.
 
 Jekyll allows me complete control over the HTML and for this site I am using a template that I bought online. Templates are a great way to get a very polished design and can be very cheap, one of my favourite template sites is [Wrap Bootstrap]() and templates only cost arount $20. However, many templates just throw together a lot of javascript controls and the many layout options they come with mekes for bluky CSS files. Unfortunately this can result in terrible front end performance!
 
