@@ -30,6 +30,9 @@ So far I've found two ways to do this:
 
 Either way you will end up with a vhd file containing Windows. You then need to use a command line tool called BCDEdit to manage your boot options and tell Windows to boot to this file. There is a small risk when changing your boot options that you could get something wrong, so the first thing to do is to back up your boot configuration.
 
+
+![Boot Manager]({{ site.url }}/assets/boot-mgr-min.jpg)
+
 ### Backing Up Your Boot Configuration Before We Begin 
 
 To back up your boot configuration open an elevated command prompt (WIN+X, A) and then type the following:
