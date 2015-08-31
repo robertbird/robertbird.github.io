@@ -1,4 +1,4 @@
 ---
 layout: articlesbycategory
-category: development
+category: devops
 ---

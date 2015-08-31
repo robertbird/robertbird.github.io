@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: "Building a developer machine from a script"
+title: "Building a developer machine from a script with Chocolatey and BoxStarter"
 author: "Robert Bird"
 comments: true
 tags:
@@ -8,6 +8,10 @@ tags:
 - devops
 ---
 
+
+
+
+## A Rant About Machine Images
 
 
 ## Backing up the boot settings
@@ -40,5 +44,10 @@ bcdedit /delete {UUID}
 
 START http://boxstarter.org/package/nr/url?https://raw.githubusercontent.com/robertbird/robertbird.devenvironment/master/MachineBuilds/Boxstarter-Machine-Build.ps1
 
+
+
+http://blogs.msdn.com/b/volkerw/archive/2014/02/04/using-a-vhd-for-development.aspx
+
+http://blogs.msdn.com/b/volkerw/archive/2014/01/24/test4.aspx
 
 
