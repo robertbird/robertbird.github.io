@@ -40,7 +40,19 @@ a {
     line-height: 22px;
 }
 
+
+.post-content p, .post-content li {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 110%;
+}
+
 .post-content p {
    padding: 7px 0;
-    
+}
+
+.post-content p {
+}
+
+.highlight {
+    font-family: monospace;   
 }
