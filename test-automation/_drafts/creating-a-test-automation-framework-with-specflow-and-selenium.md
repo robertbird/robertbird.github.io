@@ -4,7 +4,11 @@ title: Creating a framework for our specflow and selenium tests
 author: "Robert Bird"
 comments: true
 excerpt_separator: <!--more-->
-tags: [testing selenium specflow specbind]
+tags: 
+- testing 
+- selenium
+- specflow 
+- specbind
 ---
 
 Creating a framework for our specflow and selenium tests

@@ -4,7 +4,11 @@ title: Planning a test automation strategy
 author: "Robert Bird"
 comments: true
 excerpt_separator: <!--more-->
-tags: [strategy, testing]
+tags: 
+- testing
+- specflow
+- selenium
+- strategy
 ---
 
 DevOps and Continuous Deployment are important trends in allowing your business to react and adapt to meet the needs of your customers. However, in my experience, it's common to see teams that have automated their build and deployment process only to find that they are not able to test releases quickly enough. 

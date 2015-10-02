@@ -4,7 +4,10 @@ title: Part 3 - Running Our Selenium Tests On A Remote Windows Server
 author: "Robert Bird"
 comments: true
 excerpt_separator: <!--more-->
-tags: [specflow specbind selenium]
+tags: 
+- specflow 
+- specbind 
+- selenium
 ---
 
 This is the third part in my [Automated Testing with Specflow and Selenium series](/test-automation/automated-testing-with-specflow-and-selenium). In previous two posts we've seen how to setup a basic framework and then added our first test which is a great start. But automating tests and then only being able to run them from your own machine seems like a waste doesn't it.
