@@ -19,10 +19,10 @@ However after installing Xamarin for Visual Studio you may notice you now have a
 Moving the Android SDK saved me over 18Gb of disk space. To move the files you will need to do the following:
 
 1. Open the Visual Studio Options and then look under Xamarin -> Android Settings, this will show the current locations.
-![Xamarin SDK Options]({{ site.url }}/assets/xamarin/vs-android-options-before.png)
+![Xamarin SDK Options]({{ site.url }}/assets/xamarin/vs-android-options-before.PNG)
 
 2. I found the trick was to copy the files over to the new location before clicking change in the options.
-![Xamarin SDK Options]({{ site.url }}/assets/xamarin/vs-android-options-after.png)
+![Xamarin SDK Options]({{ site.url }}/assets/xamarin/vs-android-options-after.PNG)
 
 3. Remember to delete the old files and update shortcuts to the SDK Manager in your Start Menu
 
@@ -40,4 +40,4 @@ To move the AVD files, you will need to do the following:
 
 4. Click "New..." to add a new variable. Give it the name *ANDROID_SDK_HOME* and the value of the new location *D:\Android*
 
-![Xamarin SDK Options]({{ site.url }}/assets/xamarin/environment-variable.png)
+![Xamarin SDK Options]({{ site.url }}/assets/xamarin/environment-variable.PNG)
