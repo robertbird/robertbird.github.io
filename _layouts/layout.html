@@ -36,82 +36,81 @@
 
   <div id="wrap" class="boxed">
 
-  <header>
+    <header>
+      <div class="container clearfix">
+      
+        <div class="one-third column">
+          <div class="logo">
+          <a href="/">
+            <img src="/images/logo.gif" alt="Crevision - Creative Template" width="134" height="40" />
+          </a>
+          </div>
+        </div><!-- End Logo -->
+        
+        <div class="two-thirds column">
+          <nav id="menu" class="navigation">
+            <ul id="nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/archive">Archive</a></li>
+  <!--            <li><a href="/about">About</a></li>-->
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div><!-- End Menu -->
+        
+        <div class="sixteen columns"><hr /></div>
+        
+      </div><!-- End Container -->
+    </header><!-- <<< End Header >>> -->
+      
     <div class="container clearfix">
     
-      <div class="one-third column">
-        <div class="logo">
-        <a href="/">
-          <img src="/images/logo.gif" alt="Crevision - Creative Template" width="134" height="40" />
-        </a>
-        </div>
-      </div><!-- End Logo -->
+      <div class="sixteen columns"> 
+        {% if site.sitetitle %} 
+          <!-- Page Title -->
+          <h1 class="page-title">{{ site.sitetitle }}<span class="line"></span></h1>
+        {% else %}
+        <p> &nbsp;</p>
+        {% endif %} 
+      </div>
       
-      <div class="two-thirds column">
-        <nav id="menu" class="navigation">
-          <ul id="nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/archive">Archive</a></li>
-<!--            <li><a href="/about">About</a></li>-->
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div><!-- End Menu -->
+      {{content}}
+        
+    </div><!-- <<< End Container >>> -->
       
-      <div class="sixteen columns"><hr /></div>
-      
-    </div><!-- End Container -->
-  </header><!-- <<< End Header >>> -->
-  
-  <div class="container clearfix">
-  
-  <div class="sixteen columns"> 
-    {% if site.sitetitle %} 
-      <!-- Page Title -->
-      <h1 class="page-title">{{ site.sitetitle }}<span class="line"></span></h1>
-    {% else %}
-    <p> &nbsp;</p>
-    {% endif %} 
-   </div>
-    
-       {{content}}
-      
-  </div><!-- <<< End Container >>> -->
-  
-  <footer>
-    <div class="container">
-    
-      <div class="eight columns">
-        <div class="about">
-          <h3 class="title">About Me<span class="line"></span></h3>
-          <p>
-              I work as Head of Development for an incredible company called <a href="http://www.adactus.co.uk/" target="_blank">Adactus</a>.
-          </p>
-          <p>
-              I am fortunate to work with some insanely talented people, delivering large scale bespoke web, e-commerce and mobile applications. 
-              We have also created the first cloud based insurance claims management system called 
-              <a href="http://www.pulseclaims.com/" target="_blank">Pulse</a> and have ambitious plans to make it a market leading product. 
-          </p>
-        </div>
-      </div><!-- End about -->
-      
-      <div class="eight columns">
-        <!--<div class="flickr">
-          <h3 class="title">Flickr<span class="line"></span></h3>
-          <ul id="footer" class="thumbs"></ul>
-        </div>End flickr -->
-      </div> 
-      
-      <div class="sixteen columns"><hr class="bottom" /></div>
-      
-      <div class="eight columns">
-          <span class="copyright">
-          © Copyright 2015. All Rights Reserved. 
-          </span>
+    <footer>
+      <div class="container">
+        <div class="eight columns">
+          <div class="about">
+            <h3 class="title">About Me<span class="line"></span></h3>
+            <p>
+                I work as Head of Development for an incredible company called <a href="http://www.adactus.co.uk/" target="_blank">Adactus</a>.
+            </p>
+            <p>
+                I am fortunate to work with some insanely talented people, delivering large scale bespoke web, e-commerce and mobile applications. 
+                We have also created the first cloud based insurance claims management system called 
+                <a href="http://www.pulseclaims.com/" target="_blank">Pulse</a> and have ambitious plans to make it a market leading product. 
+            </p>
+          </div>
+        </div><!-- End about -->
+        
+        <div class="eight columns">
+          <!--<div class="flickr">
+            <h3 class="title">Flickr<span class="line"></span></h3>
+            <ul id="footer" class="thumbs"></ul>
+          </div>End flickr -->
+        </div> 
+        
+        <div class="sixteen columns"><hr class="bottom" /></div>
+        
+        <div class="eight columns">
+            <span class="copyright">
+            © Copyright 2015. All Rights Reserved. 
+            </span>
         </div>
       </div><!-- End container -->
-  </footer><!-- <<< End Footer >>> -->
-  
+    </footer><!-- <<< End Footer >>> -->
+    
   </div><!-- End wrap -->
   
   <!-- Start JavaScript -->
@@ -143,8 +142,7 @@
       ga('send', 'pageview');
 
     </script>
-      <script async>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-         
+    <script async>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     
-</body>
+  </body>
 </html>
